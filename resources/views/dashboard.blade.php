@@ -9,22 +9,30 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
+                    <h2>Lista de Livros</h2>
+                    <a href="{{ route('books.create') }}" class="btn btn-primary mb-3">Adicionar Livro</a>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Nome</th>
-                                <th>Email</th>
-                                <th>Criado em</th>
+                                <th>Autor</th>
+                                <th>Título</th>
+                                <th>Subtítulo</th>
+                                <th>Edição</th>
+                                <th>Editora</th>
+                                <th>Ano de Publicação</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($users as $user)
+                            @foreach ($books as $book)
                                 <tr>
-                                    <td>{{ $user->id }}</td>
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->email }}</td>
-                                    <td>{{ $user->created_at }}</td>
+                                    <td>{{ $book->id }}</td>
+                                    <td>{{ $book->author }}</td>
+                                    <td>{{ $book->title }}</td>
+                                    <td>{{ $book->subtitle }}</td>
+                                    <td>{{ $book->edition }}</td>
+                                    <td>{{ $book->publisher }}</td>
+                                    <td>{{ $book->publication_year }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
