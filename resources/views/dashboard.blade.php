@@ -21,6 +21,7 @@
                                 <th>Edição</th>
                                 <th>Editora</th>
                                 <th>Ano de Publicação</th>
+                                <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -33,6 +34,14 @@
                                     <td>{{ $book->edition }}</td>
                                     <td>{{ $book->publisher }}</td>
                                     <td>{{ $book->publication_year }}</td>
+                                    <td>
+                                        <a href="{{ route('books.edit', $book) }}" class="btn btn-warning">Editar</a>
+                                        <form action="{{ route('books.destroy', $book) }}" method="POST" style="display:inline-block;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja deletar este livro?')">Deletar</button>
+                                        </form>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
