@@ -11,6 +11,7 @@ class BookController extends Controller
     public function index()
     {
         $books = Auth::user()->books;
+        $books = Book::paginate(5);
         return view('dashboard', compact('books'));
     }
 
