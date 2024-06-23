@@ -3,8 +3,8 @@
 <head>
     <title>Editar Livro</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/book.css">
 </head>
-<body>
 <div class="container mt-5">
     <h2>Editar Livro</h2>
     <form method="POST" action="{{ route('books.update', $book) }}">

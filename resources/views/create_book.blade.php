@@ -3,6 +3,7 @@
 <head>
     <title>Adicionar Livro</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/book.css">
 </head>
 <body>
 <div class="container mt-5">
