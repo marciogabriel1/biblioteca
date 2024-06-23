@@ -1,11 +1,15 @@
 <x-app-layout>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <h2>Lista de Livros</h2>
+                <div class="p-6">
+                <div>
+                    <h1 style="font-size: 2em;">Lista de Livros</h1>
+                </div>
+
                     <a href="{{ route('books.create') }}" class="btn btn-primary mb-3">Adicionar Livro</a>
                     <table class="table table-bordered border-primary">
                         <thead>
@@ -31,7 +35,7 @@
                                     <td>{{ $book->publisher }}</td>
                                     <td>{{ $book->publication_year }}</td>
                                     <td>
-                                        <a href="{{ route('books.edit', $book) }}" class="btn btn-warning">Editar</a>
+                                        <a href="{{ route('books.edit', $book) }}" class="btn btn-primary">Editar</a>
                                         <form action="{{ route('books.destroy', $book) }}" method="POST" style="display:inline-block;">
                                             @csrf
                                             @method('DELETE')
