@@ -1,7 +1,7 @@
 body {
     background-color: #1E90FF;
     color: #fff;
-    height: 100vh; /* Garante que o fundo preto ocupe toda a altura da tela */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,15 +9,15 @@ body {
 }
 
 .container {
-    background-color: #2b2929; /* Cor do quadrado ao redor do formulário */
+    background-color: #2b2929;
     padding: 20px;
     border-radius: 10px;
-    width: 90%; /* Largura do quadrado em relação ao viewport */
-    max-width: 600px; /* Largura máxima do quadrado */
+    width: 90%;
+    max-width: 600px;
 }
 
 .form-control {
-    background-color: #111; /* Fundo dos campos de input */
-    color: #fff; /* Cor do texto nos campos de input */
-    border-color: #333; /* Cor da borda dos campos de input */
+    background-color: #111;
+    color: #fff;
+    border-color: #333;
 }
